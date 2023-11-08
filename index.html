@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальная столовая</title>
+    <style>
+        /* CSS styling for the website */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        h1 {
+            margin: 0;
+            background-color: #a66763;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .h2{
+            margin: 0;
+            background-color: #533a38;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            
+            text-decoration: none;
+            background-color: #8c615e;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav ul {
+            text-decoration: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            text-decoration: none;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  transition: .15s ease-in-out;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+                
+        section {
+            padding: 20px;
+        }
+        
+        .food-items {
+            display: inline-block;
+            flex-wrap: wrap;
+        }
+        
+        .food-item {
+            flex: 0 0 33.33%;
+            padding: 10px;
+          text-align: center;
+        }
+        
+        .food-item img {
+            text-align: center;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        .food-item h3 {
+            margin: 0;
+        }
+        
+        .food-item button {
+            
+            width: 12%;
+            text-align: center;
+
+        }
+        
+        .cart {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .cart h2 {
+            margin-top: 0;
+            
+        }
+        
+        .cart-item {
+            display: flex;
+            margin-bottom: 10px;
+            
+        }
+        
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            position: relative; left: 40%;
+        }
+        
+        .cart-item h4 {
+            margin: 0;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .button{
+            text-align: center;
+        }
+        /* CSS styling for button hover effect */
+        button {
+            text-decoration: none;
+            display: inline-block;
+  padding: 15px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  transition: .15s ease-in-out;
+  
+}
+
+        button:hover {
+            background-position: right;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="head" id="A">Заказ еды</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#A">Домой</a></li>
+            <li><a href="#Av">Меню</a></li>
+            <li><a href="#Avb">Заказ</a></li>
+        </ul>
+    </nav>
+    <h2 class="h2">Добро пожаловать в Виртуальную столовую</h2>
+    <section>
+        
+        <div class="food-item" id="Av">
+            <img class="Foot-img" src="https://img.napolke.ru/image/get?uuid=3879c313-dfa0-43cc-89bd-62ab314f5887&size=740x740" alt="Макароны улитка">
+            <div>
+                <h3 class="food-name">Макароны</h3>
+                <p class="makaron">Макароны улитка сделаный сегодня утром</p>
+                <button class="button" onclick="addToCart('Макароны улитка')">Добавить в корзину</button>
+            </div>
+        </div>
+        <div class="food-item">
+            <img class="Foot-img" src="https://menu2go.ru/images/food/194/194_333_20210810120743_4872.jpg" alt="Куриная котлета">
+            <div>
+                <h3 class="food-name">Котлета</h3>
+                <p class="kotleta">куриная котлета сделаная по старому рецепту</p>
+                <button class="button" onclick="addToCart('котлета')">Добавить в корзину</button>
+            </div>
+        </div>
+        <div class="food-item">
+            <img class="Foot-img" src="https://magicgrill.ru/wp-content/uploads/2023/07/1644932793_3-fikiwiki-com-p-kartinki-pyure-3.jpg" alt="Пюре">
+            <div>
+                <h3 class="food-name">Пюре</h3>
+                <p class="pure">Это очень вкусное пюре сделаное из молока и картошки</p>
+                <button class="button" onclick="addToCart('Пюре')">Добавить в корзину</button>
+            </div>
+        </div>
+    </section>
+    
+    <aside class="cart" id="Avb">
+        <h2>Корзина</h2>
+        <div id="cartItems"></div>
+        <button onclick="clearCart()">Очистить корзину</button>
+    </aside>
+    
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+    <script>
+        // JavaScript code for managing the shopping cart
+        let cartItems = [];
+
+        function addToCart(item) {
+            const existingItem = cartItems.find(cartItem => cartItem.name === item);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cartItems.push({ name: item, quantity: 1 });
+            }
+            displayCartItems();
+        }
+
+        function clearCart() {
+            cartItems = [];
+            displayCartItems();
+        }
+
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+
+                const itemName = document.createElement('h4');
+                itemName.textContent = `${item.name} x${item.quantity}`;
+
+                cartItem.appendChild(itemName);
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+    </script>
+</body>
+</html>
