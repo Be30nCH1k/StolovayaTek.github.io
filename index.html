@@ -37,6 +37,7 @@
         }
         
         nav ul {
+            display: flex;
             text-decoration: none;
             list-style-type: none;
             margin: 0;
@@ -45,7 +46,7 @@
         
         nav ul li {
             text-decoration: none;
-  display: inline-block;
+  display: flex;
   padding: 15px 30px;
   margin: 10px 20px;
   border-radius: 10px;
@@ -86,13 +87,18 @@
         .food-item h3 {
             margin: 0;
         }
-        
-        .food-item button {
+        .food-item button
+         {
             
             width: 12%;
             text-align: center;
 
         }
+        @media (max-width: 768px) {
+            .food-item button {
+    width: 80%;
+  }
+}
         
         .cart {
             background-color: #f4f4f4;
@@ -139,7 +145,7 @@
         button {
             text-decoration: none;
            display: flexbox;
-padding: 30px 30px;
+  padding: 20px 30px;
   margin: 10px 20px;
   border-radius: 10px;
   box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
@@ -164,9 +170,9 @@ padding: 30px 30px;
     
     <nav>
         <ul>
-            <li><a href="#A">Домой</a></li>
-            <li><a href="#Av">Меню</a></li>
             <li><a href="#Avb">Заказ</a></li>
+            <li><a href="#Av">Меню</a></li>
+            
         </ul>
     </nav>
     <h2 class="h2">Добро пожаловать в Виртуальную столовую</h2>
