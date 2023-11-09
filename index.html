@@ -6,14 +6,24 @@
     <title>Виртуальная столовая</title>
     <style>
         /* CSS styling for the website */
+        .container {
+            text-align: center;
+        }
 
+        .product {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
         
-        
+        p {
+             margin-top: 20px;
+        }
         h1 {
             margin: 0;
             background-color: #a66763;
@@ -28,39 +38,44 @@
             padding: 20px;
             text-align: center;
         }
-        nav {
-            
-            text-decoration: none;
-            background-color: #8c615e;
-            padding: 10px;
-            text-align: center;
-        }
-        
         nav ul {
-            display: inline-block;
-            text-decoration: none;
+            text-align: center;
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
-        
+
         nav ul li {
+             display: inline-block;
+        }
+
+        nav ul li a {
+            border-radius: 25px;
+            transition: .3s;
+            display: block;
+            padding: 10px;
             text-decoration: none;
-  display: flex;
-  padding: 15px 30px;
-  margin: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: white;
-  transition: .15s ease-in-out;
-            display: inline-block;
-            margin-right: 20px;
+            color: #000;
+        }
+
+        nav ul li a:hover {
+            background-color: #ccc;
         }
         
-                
+        img {
+            border-radius: 45px;
+            width: 200px;
+            height: 200px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        p {
+        margin-top: 5px;
+        }
+    
         section {
             padding: 20px;
         }
@@ -71,34 +86,36 @@
         }
         
         .food-item {
-            flex: 0 0 33.33%;
-            padding: 10px;
-          text-align: center;
+            text-align: center;
         }
         
         .food-item img {
-            text-align: center;
-            width: 200px;
-            height: 150px;
+            width: 33%;
+            margin: 0 100px;
+            width: 250px;
+            height: 200px;
             object-fit: cover;
             margin-bottom: 10px;
         }
-        
+        .Foot-img-con{
+            display: flex;
+             justify-content: center;
+        }
         .food-item h3 {
             margin: 0;
         }
         .food-item button
-         {
+        {
             
             width: 12%;
             text-align: center;
 
         }
-        @media (max-width: 768px) {
-            .food-item button {
-    width: 80%;
-  }
-}
+    @media (max-width: 768px) {
+        .food-item button {
+             width: 80%;
+    }
+        }
         
         .cart {
             background-color: #f4f4f4;
@@ -144,70 +161,462 @@
         /* CSS styling for button hover effect */
         button {
             text-decoration: none;
-           display: flexbox;
-  padding: 20px 30px;
-  margin: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: white;
-  transition: .15s ease-in-out;
-  
-}
+            display: inline-block;
+            width: 220px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: #524f4e;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+            transition: .3s;
+        }
 
         button:hover {
             background-position: right;
+            background: #2EE59D;
+            box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+            color: white;
+            transform: translateY(-7px);
         }
 
     </style>
 </head>
 <body>
     <header>
-        <h1 class="head" id="A">Заказ еды</h1>
+        <h1 class="head">Добро пожаловать в Виртуальную столовую</h1>
+        
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="#Avb">Заказ</a></li>
-            <li><a href="#Av">Меню</a></li>
-            
-        </ul>
-    </nav>
-    <h2 class="h2">Добро пожаловать в Виртуальную столовую</h2>
+
+    <h2 class="h2" id="A">Заказ еды</h2>
     <section>
+        <nav>
+            <ul>
+              <li><a href="#Avb">Холодные закуски</a></li>
+              <li><a href="#Av">Первое блюдо</a></li>
+              <li><a href="#Asd">Второе блюдо</a></li>
+              <li><a href="#Avdf">Молочное блюдо</a></li>
+              <li><a href="#Asdf">Гарнир</a></li>
+              <li><a href="#dfgh">Мучное изделие</a></li>
+              <li><a href="#sdfg">Холодные напитки</a></li>
+              <li><a href="#hjkl">Горячие напитки</a></li>
+              <li><a href="#jkl">Соусы</a></li>
+            </ul>
+          </nav>
+          <div class="container">
+            <h2 id="Avb">Холодные закуски</h2>
+            <div class="product">
+              <img src="https://calorizator.ru/sites/default/files/imagecache/recipes_full/recipe/11329.jpg" alt="Яйцо под майонезом ">
+              <h2>Яйцо под майонезом</h2>
+              <p>22 Рубля</p>
+              <button onclick="addToCart('Яйцо под майонезом')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://img.iamcook.ru/2017/upl/recipes/byusers/misc/5856/mobile/7401935a18af28e5d02912c6051e0c3b-2017.jpg" alt="Салат капустный острый со свеклой">
+              <h2>Салат капустный<br> острый со свеклой</h2>
+              <p>42 Рубля</p>
+              <button onclick="addToCart('Салат капустный острый со свеклой')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://img.freepik.com/premium-photo/russian-traditional-cuisine-salad-dressed-herring-under-coat_263368-1718.jpg?w=2000" alt="Салат «Селедка под шубой»">
+              <h2>Салат «Селедка под шубой»</h2>
+              <p>48 Рублей</p>
+              <button onclick="addToCart('Салат «Селедка под шубой»')">Добавить в корзину</button>
+
+              
+            </div>
+          </div>
+          <div class="container">
+            <div class="product">
+              <img src="https://media.istockphoto.com/id/937013238/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%B3%D1%80%D0%B5%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D1%81%D0%B0%D0%BB%D0%B0%D1%82-%D1%81%D0%BE-%D1%81%D0%B2%D0%B5%D0%B6%D0%B8%D0%BC%D0%B8-%D0%BE%D0%B2%D0%BE%D1%89%D0%B0%D0%BC%D0%B8-%D0%B8-%D1%81%D1%8B%D1%80%D0%BE%D0%BC-%D1%84%D0%B5%D1%82%D0%B0-%D0%B0%D0%BA%D0%B2%D0%B0%D1%80%D0%B5%D0%BB%D1%8C-%D0%BD%D0%B0%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F-%D0%B2%D1%80%D1%83%D1%87%D0%BD%D1%83%D1%8E-%D0%B8%D0%BB%D0%BB%D1%8E%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F.jpg?s=170667a&w=0&k=20&c=nnjTAoNjqGWZvWnYmi6czmQiaOvuRU61k4r3K4ZHCMw=" alt="Яйцо под майонезом ">
+              <h2>Салат «Акварель» </h2>
+              <p>55 Рублей</p>
+              <button onclick="addToCart('Салат «Акварель»')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAd_sAG7Dh9IBXyVl9bcEdkqdFDs1n8ikiE2JRM4zw8EONb3QYH4KTW1FUhsiXKzvWlvo&usqp=CAU" alt="Салат капустный острый со свеклой">
+              <h2>Огурчик малосольный<br> по-домашнему</h2>
+              <p>55 Рублей</p>
+              <button onclick="addToCart('Огурчик малосольный по-домашнему')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://img.freepik.com/premium-photo/healthy-fresh-salad-with-chicken-liver-apple-pomegranate-and-arugula-white-kitchen-table-background-top-view_630207-7246.jpg" alt="ТСалат «Селедка под шубой»">
+              <h2>Салат с куриной печенью </h2>
+              <p>55 Рублей</p>
+              <button onclick="addToCart('Салат с куриной печенью ')">Добавить в корзину</button>
+              
+            </div>
+     
+
+
+
+
+          </div> 
+                    <div class="container">
+            <h2 id="Av">Первое Блюдо</h2>
+            <div class="product">
+              <img src="https://www.gastronom.ru/binfiles/images/20180127/b70eedf8.jpg" alt="Суп харчо с говядиной">
+              <h2>Суп харчо с говядиной</h2>
+              <p>22 Рубля</p>
+              <button onclick="addToCart('Суп харчо с говядиной')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://magadanpravda.ru/images/2022/iyun_2022/25.06.2022/photo1656111273.jpeg" alt="Уха с горбушей">
+              <h2>Уха с горбушей</h2>
+              <p>42 Рубля</p>
+              <button onclick="addToCart('Уха с горбушей')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://ru.ipepper.org/wp-content/uploads/2021/10/final-min-6.jpg" alt="Бульон говяжий с яйцом">
+              <h2>Бульон говяжий с яйцом</h2>
+              <p>48 Рублей</p>
+              <button onclick="addToCart('Бульон говяжий с яйцом')">Добавить в корзину</button>
+
+          </div>    
+
+
+
+          <h2 id="Asd">Второе блюда</h2>
+          <div class="product">
+            <img src="https://menunedeli.ru/wp-content/uploads/2021/03/Gorbusha-s-ovoshchami-v-duhovke-500x350-500x333.jpg" alt="Яйцо под майонезом ">
+            <h2>Горбуша, запеченная <br>под овощами с сыром</h2>
+            <p>22 Рубля</p>
+            <button onclick="addToCart('Горбуша, запеченная под овощами с сыром')">Добавить в корзину</button>
+            
+          </div>
+          <div class="product">
+            <img src="https://img.iamcook.ru/2022/upl/recipes/cat/u-aa05e82113b7755562c36bb7f95d8b62.jpg" alt="Салат капустный острый со свеклой">
+            <h2>Гуляш</h2>
+            <p>42 Рубля</p>
+            <button onclick="addToCart('Гуляш')">Добавить в корзину</button>
+            
+          </div>
+          <div class="product">
+            <img src="https://e0.edimdoma.ru/data/recipes/0006/6436/66436-ed4_wide.jpg?1628812377" alt="Салат «Селедка под шубой»">
+            <h2>Курочка ароматная<br> с болгарским перцем</h2>
+            <p>48 Рублей</p>
+            <button onclick="addToCart('Курочка ароматная')">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="container">
+            
+          <div class="product">
+            <img src="https://rutxt.ru/files/12972/original/726e120f25.JPG" alt="Яйцо под майонезом ">
+            <h2>Желудки куриные<br> жареные с луком </h2>
+            <p>55 Рублей</p>
+            <button onclick="addToCart('Желудки куриные жареные с луком')">Добавить в корзину</button>
+            
+          </div>
+          <div class="product">
+            <img src="https://img.delo-vcusa.ru/2020/02/Myaso-po-albanski.jpg" alt="Салат капустный острый со свеклой">
+            <h2>Мясо по-албански</h2>
+            <p>55 Рублей</p>
+            <button onclick="addToCart('Мясо по-албански')">Добавить в корзину</button>
+            
+          </div>
+          <div class="product">
+            <img src="https://www.vsegdavkusno.ru/assets/images/recipes/2307/image_565/zharkoe-iz-svininy-s-kartofelem-recept.jpg" alt="ТСалат «Селедка под шубой»">
+            <h2>Жаркое со свининой(230г) </h2>
+            <p>55 Рублей</p>
+            <button onclick="addToCart('Жаркое со свининой(230г) ')">Добавить в корзину</button>
+            
+          </div>
+          <div class="container">
+          
+            <div class="product">
+              <img src="https://img1.russianfood.com/dycontent/images_upl/625/big_624280.jpg" alt="Суп харчо с говядиной">
+              <h2>Жаркое со свининой(160г)</h2>
+              <p>22 Рубля</p>
+              <button onclick="addToCart('Жаркое со свининой(160г)')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://www.vkusnyblog.com/wp-content/uploads/2010/02/kurinye-frikadelki-v-tomate.jpg" alt="Уха с горбушей">
+              <h2>Тефтели куриные в соусе</h2>
+              <p>42 Рубля</p>
+              <button onclick="addToCart('Тефтели куриные в соусе')">Добавить в корзину</button>
+              
+            </div>
+            
+            
+
+
+
+            <div class="container">
+                <h2 id="Avdf">Молочные блюда</h2>
+                <div class="product">
+                  <img src="https://cookeda.com/wp-content/uploads/2017/05/yachnevaya-kasha5.jpg" alt="Каша ячневая(300г)">
+                  <h2>Каша ячневая(300г)</h2>
+                  <p>22 Рубля</p>
+                  <button onclick="addToCart('Каша ячневая(300г)')">Добавить в корзину</button>
+                  
+                </div>
+                <div class="product">
+                  <img src="https://kedem.ru/photo/recipe/rname/yachnevaya-kasha-na-vode.jpg" alt="Каша ячневая(150г)">
+                  <h2>Каша ячневая(150г)</h2>
+                  <p>42 Рубля</p>
+                  <button onclick="addToCart('Каша ячневая(150г)')">Добавить в корзину</button>
+                  
+                </div>
+                <div class="product">
+                  <img src="https://api.yarcheplus.ru/thumbnail/740x494/18/751/18751.png" alt="Молоко 2.5%">
+                  <h2>Молоко 2.5%</h2>
+                  <p>48 Рублей</p>
+                  <button onclick="addToCart('Молоко 2.5%')">Добавить в корзину</button>
+    
+              </div>  
+
+
+
+                        </div> 
+                    <div class="container">
+            <h2 id="Asdf">Гарнир</h2>
+            <div class="product">
+              <img src="https://static.1000.menu/img/content-v2/a0/42/19723/otvarnoi-ris-na-vode-rassypchatyi_1634019503_9_max.jpg" alt="Рис отварной">
+              <h2>Рис отварной</h2>
+              <p>22 Рубля</p>
+              <button onclick="addToCart('Рис отварной')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://img1.russianfood.com/dycontent/images_upl/500/big_499276.jpg" alt="Гречка по-купечески с грибами">
+              <h2>Гречка по-купечески<br> с грибами</h2>
+              <p>42 Рубля</p>
+              <button onclick="addToCart('Гречка по-купечески с грибами')">Добавить в корзину</button>
+              
+            </div>
+            <div class="product">
+              <img src="https://ku-mir.ru/images/catalog/makarony-otvarnye-632.jpg" alt="Макароны  отварные">
+              <h2>Макароны  отварные</h2>
+              <p>48 Рублей</p>
+              <button onclick="addToCart('Макароны  отварные')">Добавить в корзину</button>
+
+          </div>
+
+
+
+            <h2 id="dfgh">Мучные изделие</h2>
+        </div>
+    </div>
+    <div class="container">
+      <div class="product">
+        <img src="data:image/jpeg;base64,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" alt="Сосиска в тесте ">
+        <h2>Сосиска в тесте </h2>
+        <p>55 Рублей</p>
+        <button onclick="addToCart('Сосиска в тесте')">Добавить в корзину</button>
         
-        <div class="food-item" id="Av">
-            <img class="Foot-img" src="https://img.napolke.ru/image/get?uuid=3879c313-dfa0-43cc-89bd-62ab314f5887&size=740x740" alt="Макароны улитка">
-            <div>
-                <h3 class="food-name">Макароны</h3>
-                <p class="makaron">Макароны улитка сделаный сегодня утром</p>
-                <button class="button" onclick="addToCart('Макароны улитка')">Добавить в корзину</button>
-            </div>
+      </div>
+      <div class="product">
+        <img src="https://img1.russianfood.com/dycontent/images_upl/551/big_550139.jpg" alt="Пирог с картошкой">
+        <h2>Пирог с картошкой</h2>
+        <p>55 Рублей</p>
+        <button onclick="addToCart('Пирог с картошкой')">Добавить в корзину</button>
+        
+      </div>
+      <div class="product">
+        <img src="https://zira.uz/wp-content/uploads/2018/09/zalivnoy-pirog-2.jpg" alt="Пирог с луком и яйцом">
+        <h2>Пирог с луком и яйцом </h2>
+        <p>55 Рублей</p>
+        <button onclick="addToCart('Пирог с луком и яйцом')">Добавить в корзину</button>
+        
+      </div>
+
+
+
+    </div>
+</div>
+<div class="container">
+  <div class="product">
+    <img src="https://main-cdn.sbermegamarket.ru/big1/hlr-system/-11/113/089/718/822/13/100028789934b0.jpg" alt="Булочка со сгущенкой ">
+    <h2>Булочка со сгущенкой</h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Булочка со сгущенкой')">Добавить в корзину</button>
+    
+  </div>
+  <div class="product">
+    <img src="https://img.vkusvill.ru/pim/images/site_LargeWebP/c21f63ad-247d-4b39-8a93-f15e30ae8c04.jpg?1650908116.6553" alt="Улитка с маком">
+    <h2>Улитка с маком</h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Улитка с маком')">Добавить в корзину</button>
+    
+  </div>
+  <div class="product">
+    <img src="https://static.1000.menu/img/content/17198/pirojki-s-pechenu-v-duxovke_1475663362_1_max.jpg" alt="Пирожок с печенью">
+    <h2>Пирожок с печенью </h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Пирожок с печенью ')">Добавить в корзину</button>
+    
+  </div>
+
+
+
+
+
+</div>
+</div>
+<div class="container">
+  <div class="product">
+    <img src="https://static.1000.menu/img/content-v2/d9/c1/42785/nejnaya-tvorojnaya-zapekanka_1580221888_10_max.jpg" alt="Запеканка с творогом">
+    <h2>Запеканка с творогом </h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Запеканка с творогом')">Добавить в корзину</button>
+    
+  </div>
+
+
+
+
+
+<h2 id="sdfg">Холодные напитки</h2>
+  <div class="container">
+    <div class="product">
+      <img src="https://static.1000.menu/img/content-v2/64/20/4903/kompot-iz-suhofruktov_1590812179_14_max.jpg" alt="Компот из сухофруктов ">
+      <h2>Компот из сухофруктов</h2>
+      <p>55 Рублей</p>
+      <button onclick="addToCart('Компот из сухофруктов')">Добавить в корзину</button>
+      
+    </div>
+    <div class="product">
+      <img src="https://avatars.dzeninfra.ru/get-zen_doc/1841592/pub_61508f5ff8c746561899cddd_61508fe4eebd2f0145573b56/scale_1200" alt="Напиток «Ягодное ассорти»">
+      <h2>Напиток «Ягодное ассорти»<br>  (ранетка, черноплодная рябина)</h2>
+      <p>55 Рублей</p>
+      <button onclick="addToCart('Напиток «Ягодное ассорти»')">Добавить в корзину</button>
+      
+    </div>
+
+
+
+
+
+
+
+
+    <h2 id="hjkl">Горячие напитки</h2>
+</div>
+</div>
+<div class="container">
+<div class="product">
+<img src="https://avatars.dzeninfra.ru/get-zen_doc/1708265/pub_5cd15a9b14686000b3028d8d_5cd17f8fc6dcb700b36c92a5/scale_1200" alt="Чай (черный, зеленый) ">
+<h2>Чай (черный, зеленый) </h2>
+<p>55 Рублей</p>
+<button onclick="addToCart('Чай (черный, зеленый)')">Добавить в корзину</button>
+
+</div>
+<div class="product">
+<img src="https://centrstomatologii.ru/upload/resize_cache/webp/iblock/8b9/fe1rhhjon2lrtjfaqjoejc14elz4xk8s/1300_850_1/wide_4_3_821a7b2af4c4914631b84d86a6cafaad.webp" alt="Сахар">
+<h2>Сахар</h2>
+<p>55 Рублей</p>
+<button onclick="addToCart('Сахар')">Добавить в корзину</button>
+
+</div>
+<div class="product">
+<img src="https://img.freepik.com/free-photo/slice-ripe-lemon-citrus-fruit-on-a-white_146671-19259.jpg" alt="Лимон">
+<h2>Лимон </h2>
+<p>55 Рублей</p>
+<button onclick="addToCart('Лимон')">Добавить в корзину</button>
+
+</div>
+
+
+
+
+
+</div>
+</div>
+<div class="container">
+<div class="product">
+<img src="data:image/jpeg;base64,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" alt="Кофе растворимый ">
+<h2>Кофе растворимый </h2>
+<p>55 Рублей</p>
+<button onclick="addToCart('Кофе растворимый')">Добавить в корзину</button>
+
+</div>
+<div class="product">
+<img src="https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/785099/GFN2UovJznYVgjVJPSRORw.JPG" alt="Кофе 3 в 1">
+<h2>Кофе 3 в 1</h2>
+<p>55 Рублей</p>
+<button onclick="addToCart('Кофе 3 в 1')">Добавить в корзину</button>
+
+</div>
+<div class="product">
+<img src="https://vilkin.pro/wp-content/uploads/2018/09/zelenyi-chai-s-imbirem-i-limonom.jpg" alt="Напиток  «Имбирно -лимонный»  (лимон  брусника  мед имбирь мята)">
+<h2>Напиток  «Имбирно -лимонный»<br>  (лимон  брусника  мед имбирь мята) </h2>
+<p>55 Рублей</p>
+<button onclick="addToCart('Напиток  «Имбирно -лимонный»  (лимон  брусника  мед имбирь мята)')">Добавить в корзину</button>
+
+</div>
+
+
+
+<h2 id="jkl">Соусы</h2>
+<div class="container">
+    <div class="product">
+    <img src="https://static.1000.menu/img/content-v2/7e/72/29008/krem-iz-smetany-i-sgushchenki-dlya-torta_1608357634_12_max.jpg" alt="Сметана, Майонез, Сгущенка ">
+    <h2>Сметана, Майонез, Сгущенка </h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Сметана, Майонез, Сгущенка')">Добавить в корзину</button>
+    
+    </div>
+    <div class="product">
+    <img src="https://api.yarcheplus.ru/thumbnail/740x494/13/595/13595.png" alt="Масло">
+    <h2>Масло</h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Масло')">Добавить в корзину</button>
+    
+    </div>
+    <div class="product">
+    <img src="https://e3.edimdoma.ru/data/recipes/0014/3549/143549-ed4_wide.jpg?1628760490" alt="Аджика">
+    <h2>Аджика</h2>
+    <p>55 Рублей</p>
+    <button onclick="addToCart('Аджика')">Добавить в корзину</button>
+    
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="product">
+        <img src="https://shengen-delivery.ru/wp-content/uploads/2021/09/ketchup-3000h3000-scaled.jpg" alt="Кетчуп ">
+        <h2>Кетчуп </h2>
+        <p>55 Рублей</p>
+        <button onclick="addToCart('Кетчуп')">Добавить в корзину</button>
+        
         </div>
-        <div class="food-item">
-            <img class="Foot-img" src="https://menu2go.ru/images/food/194/194_333_20210810120743_4872.jpg" alt="Куриная котлета">
-            <div>
-                <h3 class="food-name">Котлета</h3>
-                <p class="kotleta">куриная котлета сделаная по старому рецепту</p>
-                <button class="button" onclick="addToCart('котлета')">Добавить в корзину</button>
-            </div>
+        <div class="product">
+        <img src="https://food-udm.ru/images/sous-belyy-osnovnoy-1100.jpg" alt="Соус основной">
+        <h2>Соус основной</h2>
+        <p>55 Рублей</p>
+        <button onclick="addToCart('Соус основной')">Добавить в корзину</button>
+        
         </div>
-        <div class="food-item">
-            <img class="Foot-img" src="https://magicgrill.ru/wp-content/uploads/2023/07/1644932793_3-fikiwiki-com-p-kartinki-pyure-3.jpg" alt="Пюре">
-            <div>
-                <h3 class="food-name">Пюре</h3>
-                <p class="pure">Это очень вкусное пюре сделаное из молока и картошки</p>
-                <button class="button" onclick="addToCart('Пюре')">Добавить в корзину</button>
-            </div>
+        <div class="product">
+        <img src="https://e1.edimdoma.ru/data/fat_tags/0000/1464/1464-ed4_wide.jpg?1515755534" alt="Зелень">
+        <h2>Зелень</h2>
+        <p>55 Рублей</p>
+        <button onclick="addToCart('Зелень')">Добавить в корзину</button>
+        
         </div>
     </section>
     
     <aside class="cart" id="Avb">
         <h2>Корзина</h2>
         <div id="cartItems"></div>
-        <button onclick="clearCart()">Очистить корзину</button>
+        <button onclick="clearCart()">Очистить</button>
     </aside>
     
     <footer>
@@ -249,5 +658,8 @@
             });
         }
     </script>
+    
 </body>
 </html>
+
+
